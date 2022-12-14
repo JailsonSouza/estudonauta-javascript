@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <title>Introduction DOM</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Introdução ao DOM</h1>
+        <!-- 
+            O DOM é um conjunto de objetos dentro do navegador que vai dar acesso aos
+            componentes internos do web site
+            só é possível manipular o dom quando tiver rodando js no navegador
+            
+        -->
+        
+        <!--
+            Arvore DOM
+                 window
+        location document history
+        
+        location: localização do seu site, url, pagina atual
+        document: documento atual
+        history: um historico de navegação, guarda de que pagina veio, para qual foi
+        -->
+        <p id="p0" class="par">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus atque, laboriosam quo, ut, non ducimus mollitia minima cumque amet facere earum. Vel nisi, vero ratione quidem cumque ipsum atque laudantium?
+        </p>
+        <p id="p1">Segundo paragrafo</p>
+        <!-- 
+            Selecionar uma tag para manipular com DOM 
+            
+            - Marca = getElementsByTagName()
+            - ID = getElementById()
+            - Nome = getElementsByName()
+            - Classe = getElementsByClassName()
+            - Seletor = 
+        -->
+        <div id="msg" name="teste">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, ipsa? Voluptatem, blanditiis esse placeat quisquam nobis quaerat, ipsa voluptates reiciendis quod praesentium corrupti asperiores totam culpa et unde eos natus.</div>
+        <script>
+            // marca
+            var p1 = window.document.getElementsByClassName('par') // pegando o segundo paragrafo que aparecer na página
+            var msg = window.document.getElementById('msg') // pegando o segundo paragrafo que aparecer na página
+            var msg = window.document.getElementsByName('teste') // pegando o segundo paragrafo que aparecer na página
+            //msg.style.color = 'blue'
+            var corpo = window.document.body
+            //corpo.style.background = 'white'
+            window.document.write('Adicionando esse texto no paragrafo' + corpo.innerText)
+            //p1.style.color = 'red'
+            //window.alert(corpo.innerText)
+            // id = #
+            // class = .
+            var t = window.document.querySelector('div#msg')
+            var e = window.document.querySelector('div.p')
+        </script>
+    </body>
+</html>

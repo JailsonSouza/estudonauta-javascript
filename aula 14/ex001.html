@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Descubra sua nacionalidade</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <aside>
+            <h1>Vamos contar</h1>
+            <div id="content-princ">
+                <label for="txtInicio">Início: </label>
+                <input type="text" name="txtInicio" id="txtInicio"> <br>
+                <label for="txtFinal">Final: </label>
+                <input type="text" name="txtFinal" id="txtFinal"> <br>
+                <label for="txtPassos">Passo: </label>
+                <input type="text" name="txtFinal" id="txtFinal"><br>
+                <input type="button" value="Contar" onclick="Calcular_numeros()">
+            </div>
+            <div id="res"></div>
+        </aside>
+    </body>
+    <script>
+        function Verificar_nacionalidade() {
+            var txtpais = document.getElementById('txtpais')
+            var pais = txtpais.value
+            var res = document.getElementById('res')
+
+            res.innerHTML = `Você nasceu no(a) <strong>${pais}</strong><br>`
+            if (pais == "Brasil"){
+                res.innerHTML += 'Logo, você é <strong>Brasileiro!</strong>'
+            }else if (pais == "Argentina"){
+                res.innerHTML += 'Logo, você é <strong>Argentino!</strong>'
+            }else {
+                res.innerHTML += 'Logo, você é <strong>Estrangeiro!</strong>'
+            }e
+        }
+    </script>
+</html>
